@@ -12,10 +12,10 @@ while option_input != 'q':
         print("Thank you for using Todoapp! See you next time")
 
     elif option_input == 'n':
+        tasks.append(input('Write your new task:'))
+    elif option_input == 'c':
 
-    elif option_input == "c":
-
-    elif option_input == "r":
+    elif option_input == 'r':
 
     else:
         pass
