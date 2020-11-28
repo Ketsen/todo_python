@@ -31,4 +31,4 @@ while option_input != 'q':
         tasks.clear()
 
     else:
-        pass
+        print("Task unknow. Back to the menu")
