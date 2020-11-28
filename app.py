@@ -11,4 +11,11 @@ while option_input != 'q':
     if option_input == 'q':
         print("Thank you for using Todoapp! See you next time")
 
-   
+    elif option_input == 'n':
+
+    elif option_input == "c":
+
+    elif option_input == "r":
+
+    else:
+        pass
