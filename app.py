@@ -1,34 +1,36 @@
 tasks = []
-print("Hello,\n"+
-      "Welcome on Todoapp!!!")
-
-option_input = ''
-while option_input != 'q':
-
+question = ''
+print("Hello,\nWelcome on Todoapp !!!")
+num = 1
+while question !="q":
     print('(q = quit, l = list, n = new, c = complete, r = reset)')
-    option_input = input("What do you want to do ?").lower()
+    question = input("What do you want to do ?\n            ").lower()
 
-    if option_input == 'q':
-        print("Thank you for using Todoapp! See you next time")
+    if question =='q':
+        print("Thanks to use todoapp !\nSee you soon!!!")
 
-    elif option_input == 'l':
-        print('your open tasks are:')
+    elif question =="l":
+        print("Your tasks are:")
         for task in tasks:
-            print('-'+task)
+            print("-",num,".",task)
+            num +=1
+        num = 1
 
-    elif option_input == 'n':
-        tasks.append(input('Write your new task:'))
+    elif question =='n':
+        new = input("Write the new task")
+        tasks.append(new)
 
-    elif option_input == 'c':
-        to_delete =input('Which task do you want to delete ?')
+    elif question =="c":
+        for task in tasks:
+            print("-", num, ".", task)
+            num += 1
+        num = 1
+        delete = int(input("Which task do you want do delete ? (write the number)"))
+        tasks.remove(tasks[delete-1])
 
-        if to_delete in tasks:
-            tasks.remove(to_delete)
-        else:
-            print("Task  unknow. Back to the menu.")
-
-    elif option_input == 'r':
+    elif question =="r":
         tasks.clear()
+        print("tasks are clear")
 
     else:
-        print("Task unknow. Back to the menu")
+        print("Unknow command. Back to menu.")
